@@ -14,4 +14,4 @@ main = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='Сделать зак
                                      input_field_placeholder='Check a button')
 
 # Каталог
-catalog =InlineKeyboardMarkup()
+catalog =InlineKeyboardMarkup(inline_keyboard=[[]])
