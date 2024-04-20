@@ -15,6 +15,7 @@ async def main():
 # Commands
 
 if __name__ == "__main__":
-   # try:
+   try:
        asyncio.run(main())
-   # except KeyboardInterrupt:
+   except KeyboardInterrupt:
+       print('Бот отключён')

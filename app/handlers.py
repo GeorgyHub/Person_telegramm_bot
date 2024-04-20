@@ -16,8 +16,8 @@ async def cmd_help(message: Message):
 @router.message(Command('Contact'))
 async def cmd_contact(message: Message):
     await message.answer('Мои контакты для связи')
-    await message.reply('''Вконтакте: https://vk.com/goshanpol <br> 
-                        Instagramm: https://www.instagram.com/georgy.polkanov/ <br>
+    await message.answer('''Вконтакте: https://vk.com/goshanpol
+                        Instagramm: https://www.instagram.com/georgy.polkanov/
                         Telegramm: https://t.me/GoshanPol''')
 
 @router.message(F.text == 'Сделать заказ')
