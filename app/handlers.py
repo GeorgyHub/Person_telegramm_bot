@@ -1,19 +1,20 @@
 from aiogram import F, Router
 from aiogram.types import Message
 from aiogram.filters import CommandStart, Command
-#import app.keyboard as kb
+
+import app.keyboard as kb
 
 router = Router()
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.answer('Привет!')
+    await message.answer('Привет!', reply_markup=kb.main)
 
-@router.message(Command('help'))
+@router.message(F.text == 'Помощь')
 async def cmd_help(message: Message):
     await message.answer('Чем могу вам подсказать?')
 
-@router.message(Command('Contact'))
+@router.message(F.text == 'Контакты')
 async def cmd_contact(message: Message):
     await message.answer('Мои контакты для связи')
     await message.answer('''Вконтакте: https://vk.com/goshanpol
