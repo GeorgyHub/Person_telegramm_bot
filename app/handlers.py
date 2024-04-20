@@ -1,5 +1,5 @@
 from aiogram import F, Router
-from aiogram.types import Message
+from aiogram.types import Message, callback_query
 from aiogram.filters import CommandStart, Command
 
 import app.keyboard as kb
@@ -23,4 +23,9 @@ async def cmd_contact(message: Message):
 
 @router.message(F.text == 'Сделать заказ')
 async def frontend(message: Message):
-    await message.answer('Выберите категорию заказа')
+    await message.answer('Выберите категорию заказа', reply_markup=kb.catalog)
+
+@router.callback_query(F.data == 'Web')
+async def Web(callback: callback_query):
+    await callback.answer('Опишите ТЗ', show_alert=True)
+    await callback.message.answer('Опишите ТЗ')

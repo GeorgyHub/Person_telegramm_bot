@@ -8,6 +8,7 @@ main = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='Сделать зак
                                      input_field_placeholder='Пункт меню')
 
 # Каталог
-catalog =InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Разработка сайта')],
-                                               [InlineKeyboardButton(text='Разработка сайта')],
-                                               [InlineKeyboardButton(text='Разработка сайта')]])
+catalog =InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Разработка сайта', callback_data='Web')],
+                                               [InlineKeyboardButton(text='Разработка ботов', callback_data='bots')],
+                                               [InlineKeyboardButton(text='Дизайн макетов', callback_data='disang')],
+                                               [InlineKeyboardButton(text='Парсинг', callback_data='parsing')]])
